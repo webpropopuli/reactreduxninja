@@ -1,29 +1,62 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> See David React</title>
+  <link rel="stylesheet" href="style.css">
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <title>Document</title>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>    
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <title>Document</title>
 </head>
+
 <body>
 <div id="app"></div>
 
-    <script type="text/babel">
-        class MyApp extends React.Component {
-            render() {
-                return (
-                    <div className="app-content">
-                      <h1> Hi there </h1>
-                      <p> { Math.random() * 10} bears are mad</p>
-                    </div>
+<script type="text/babel">   
+
+class MyApp extends React.Component {
+    state = {
+            name: '???',
+            age: 30
+            }
+            // 'this' is tied to where fn is called, not where it lives
+        subNameBtn = (e) => {        // must be fat arrow to bind 'this' to caller
+                //console.log(this.state);
+                const newName = 
+                this.setState({name : newName});
+            }
+        handleMouseOver = (e) => {
+                console.log(e.target, e.pageX, e.pageY);
+            }
+
+        handleChange = (e) => {
+            this.setState({
+                name : e.target.value});
+            }
+
+        handleSubmit = (e) => {
+            e.preventDefault()
+            console.info(`form submit by ${this.state.name}`)
+            }    
+
+        render() {
+            return (
+                <div className="app-content">
+                    <p> Hello {this.state.name}, the bears seem mad today.</p>
+                    <form onSubmit={this.handleSubmit}>
+                        <input type = 'text' onChange={this.handleChange}/>
+                        <button>Enter Name</button>
+                    </form>    
+                </div>
                 )
             }
         }
+        
 
-        ReactDOM.render(<MyApp />, document.getElementById('app'))
-    </script>
+ReactDOM.render(<MyApp />, document.getElementById('app'))    
 
-</body>
-</html>
+</script>
+
+</body></html>
