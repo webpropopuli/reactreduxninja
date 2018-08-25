@@ -1,4 +1,4 @@
-LAst stop point: https://www.youtube.com/watch?v=5QwNCX3UbXc&index=10&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
+Last stop point: https://www.youtube.com/watch?v=5QwNCX3UbXc&index=10&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
 
 #Working through the React Tutorial
 ## Weds: create-react-app
@@ -33,7 +33,7 @@ LAst stop point: https://www.youtube.com/watch?v=5QwNCX3UbXc&index=10&list=PL4cU
 
         ReactDOM.render(<MyApp />, document.getElementById('root'));
 
-# PROPS
+## PROPS
    Data flows down from parent to children. Watch the 'myTitle' string become a 'prop' ro 'Welcome':
 ```
    const myTitle = "The super awesome React Thing!!"
@@ -57,11 +57,11 @@ class Welcome extends Component {   // Welcome is a child prop of App
 }
 ```
 
-# STATE
+## STATE
 Keep track of things. Allows dynamice components. Toggle is good example.
 Not setting in constructor anymore
 
-# LIFECYCLE METHODS
+## LIFECYCLE METHODS
 Phases that trigger events. constructor(), componentWillMount(), ..WillReceiveProps(), ..ShouldComponentUpdate(), ..WillUpdate(), ..DidUpdate(), ..WillUnmount(), ..ComponentDidCatch(), et al
   ```//LIFECYCLE parts
   constructor(props) {
@@ -76,5 +76,5 @@ Phases that trigger events. constructor(), componentWillMount(), ..WillReceivePr
   componentDidMount() {           // AFTER RENDER
     console.log('Did mount')   }
 ```
-# REFS
+## REFS
 Like a reference to a DOM element
