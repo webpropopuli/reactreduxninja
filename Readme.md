@@ -1,4 +1,4 @@
-Last stop point: https://www.youtube.com/watch?v=5QwNCX3UbXc&index=10&list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG
+# (This has been moved into it's own Gist: https://gist.github.com/webpropopuli/7d9d3ef0ced2cc727bcf9b6a920a3cf0)
 
 #Working through the React Tutorial
 ## Weds: create-react-app
@@ -44,7 +44,7 @@ Last stop point: https://www.youtube.com/watch?v=5QwNCX3UbXc&index=10&list=PL4cU
           <div className="App">
             <header className="App-header">
               <Welcome text={myTitle}/>         // SEE? test is a prop of Welcome
-            </header>
+            </header> 
           </div>
         );  } }
 
